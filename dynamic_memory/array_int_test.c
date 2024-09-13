@@ -2,6 +2,15 @@
 
 #include "array_utils.h"
 
+typedef struct {
+    void *data
+    int numel;
+    int capacity;
+    int elem_size;
+} array_s
+
+int add(void *, array_s *, int);
+
 int main() {
     array_s *arr = malloc(sizeof(array_s));
     arr->elem_size = sizeof(int);
